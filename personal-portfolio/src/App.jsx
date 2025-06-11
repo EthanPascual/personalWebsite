@@ -5,20 +5,27 @@ import Home from './pages/Home.jsx'
 import Contacts from './pages/Contacts.jsx'
 import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
+import { useRef } from 'react'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const projectsRef = useRef(null)
   return (
     <>
-    <Navbar />
-    <h1>Ethan Pascual</h1>
-    <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contacts />} />
-    </Routes>
+      <Navbar />
+      <main>
+        <section id="home" className="min-h-screen p-8">
+          <Home scrollToProjects={() => projectsRef.current?.scrollIntoView({ behavior: 'smooth' })} />
+        </section>
+
+        <section id="projects" className="min-h-screen p-8">
+          <Projects />
+        </section>
+
+        <section id="contact" className="min-h-screen p-8">
+          <Contacts />
+        </section>
+      </main>
     </>
   )
 }

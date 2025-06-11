@@ -3,21 +3,14 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="bg-gray-800 text-white p-4 flex justify-between">
-      <h1 className="text-xl font-bold">My Portfolio</h1>
-      <div className="space-x-4">
-        <Link to="/" className="hover:text-blue-300">
-          Home
-        </Link>
-        <Link to="/projects" className="hover:text-blue-300">
-          Projects
-        </Link>
-        <Link to="/contact" className="hover:text-blue-300">
-          Contact
-        </Link>
-      </div>
+    <nav className="fixed top-0 w-full bg-gray-100 p-4 shadow z-50">
+      <ul className="flex justify-center space-x-6">
+        <li><a href="#home" className="hover:text-orange-500">Home</a></li>
+        <li><a href="#projects" className="hover:text-orange-500">Projects</a></li>
+        <li><a href="#contact" className="hover:text-orange-500">Contact</a></li>
+      </ul>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
