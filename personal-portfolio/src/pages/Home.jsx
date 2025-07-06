@@ -3,7 +3,6 @@ import EthanPascual from '../assets/EthanPascual.jpeg';
 function Home({ scrollToProjects }) {
     return (
       <div className="flex flex-col md:flex-row items-center justify-between p-8 min-h-screen">
-        {/* Text */}
         <div className="md:w-1/2 w-full text-center md:text-left">
           <h1 className="text-4xl font-bold mb-4">Hi, I'm Ethan Pascual</h1>
           <p className="text-lg mb-6">
@@ -17,7 +16,6 @@ function Home({ scrollToProjects }) {
           </button>
         </div>
   
-        {/* Image */}
         <div className="md:w-1/2 w-full mt-8 md:mt-0 flex justify-center">
           <img
             src={EthanPascual}
