@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import Projects from './pages/Projects.jsx'
-import Home from './pages/Home.jsx'
-import Contacts from './pages/Contacts.jsx'
-import Navbar from './components/Navbar';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useRef } from 'react'
-import AboutMe from './pages/AboutMe.jsx'
-
+import './App.css'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import AboutMe from './pages/AboutMe'
+import Projects from './pages/Projects'
+import Contacts from './pages/Contacts'
+import ProjectDetail from './pages/ProjectDetail'
 
 function App() {
   const projectsRef = useRef(null)
-  return (
+
+  const MainPage = () => (
     <>
       <Navbar />
       <main>
@@ -23,11 +23,7 @@ function App() {
           <AboutMe />
         </section>
 
-        <section
-          id="projects"
-          ref={projectsRef}
-          className="min-h-screen p-8"
-        >
+        <section id="projects" ref={projectsRef} className="min-h-screen p-8">
           <Projects />
         </section>
 
@@ -36,6 +32,13 @@ function App() {
         </section>
       </main>
     </>
+  )
+
+  return (
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
+      </Routes>
   )
 }
 
