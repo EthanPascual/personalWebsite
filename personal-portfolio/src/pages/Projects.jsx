@@ -17,6 +17,9 @@ function Projects() {
           </Link>
         ))}
       </div>
+        <a href="/Ethan-Pascual-Resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500">
+            View My Resume
+        </a>
     </section>
   );
 }
