@@ -29,7 +29,8 @@ export default function Contacts() {
   }
 
   return (
-    <div>
+    <section className="p-8">
+        <div>
       <h1 className="text-3xl font-bold mb-4">Contact Me</h1>
       <p className="mb-6">
         Have a question or want to work together? Fill out the form below and I’ll get back to you!
@@ -98,5 +99,7 @@ export default function Contacts() {
         </div>
       )}
     </div>
+    </section>
+    
   )
 }
