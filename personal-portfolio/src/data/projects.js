@@ -29,4 +29,13 @@ export const projects = [
         github: 'https://github.com/...',
         demo: 'https://...'
       },
+      {
+        id: 'project-4',
+        title: 'testing scrolling',
+        image: EthanPascual,
+        description: 'This is another great project...',
+        tech: ['Python', 'Flask'],
+        github: 'https://github.com/...',
+        demo: 'https://...'
+      },
   ];
